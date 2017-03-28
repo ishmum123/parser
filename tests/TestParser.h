@@ -1,6 +1,7 @@
 #ifndef __TEST_PARSER_H__
 #define __TEST_PARSER_H__
 
+//#define _GLIBCXX_USE_CXX11_ABI 0
 #include <string>
 #include <vector>
 #include <iostream>
@@ -14,8 +15,8 @@ typedef vector<string> vs;
 class TestParser : public CppTest {
 
 	TEST_CLASS(TestParser);
-	TEST(testGetResult);
-	//TEST(testGetWords);
+	//TEST(testGetResult);
+	TEST(testGetWords);
 	END_TEST();
 
 	Parser *p;
@@ -23,11 +24,11 @@ public:
 	void setUp();
 	void tearDown();
 protected:
-	void testGetResult();
-	//void testGetWords();
+	//void testGetResult();
+	void testGetWords();
 };
 
-void TestParser::testGetResult() { 
+/** void TestParser::testGetResult() { 
 	string addition("(+ 4 5)");
 	getAssertion(p->getResult(addition), 9);
 	string subtraction("(- 4 5)");
@@ -35,15 +36,15 @@ void TestParser::testGetResult() {
 	string multiplication("(* 4 5)");
 	getAssertion(p->getResult(multiplication), 20);
 	string division("(+ 4 5)");
-	getAssertion(p->getResult(division), 0.8);
-}
+	getAssertion(p->getResult(division), 0.8); 
+	getAssertion(1 = 1);
+} */
 
-/** void TestParser::testGetWords() {
+void TestParser::testGetWords() {
 	string hw = "Hello World!";
 	vs v = {"Hello", "World!"};
-	cout<<hw<<endl;
 	getAssertion(p->getWords(hw), v);
-} */
+}
 
 void TestParser::setUp() {
 	p = new Parser();

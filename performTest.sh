@@ -1,3 +1,3 @@
 #!/bin/bash
 
-make && ./RunTests && make clean
+make test && ./RunTests && make cleantest
