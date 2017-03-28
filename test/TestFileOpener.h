@@ -25,7 +25,7 @@ void TestFileOpener::testGetOpen() {
 }
 
 void TestFileOpener::setUp() {
-	fo = new FileOpener("iris.data");
+	fo = new FileOpener("test/iris.data");
 }
 
 void TestFileOpener::tearDown() {

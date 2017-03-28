@@ -1,5 +1,6 @@
 #include "TestFirstClass.h"
 #include "TestFileOpener.h"
+#include "TestParser.h"
 
 //Include this only(!) after including the test files
 #include "TestPerformer.h"
